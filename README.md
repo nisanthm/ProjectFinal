@@ -1,9 +1,9 @@
-## Project 8
+## Final Project
 
-### project 8 and its about setting up a navigation bar so the rest of the pages are seen easier
+### Final project and i have to present with the finished result
 
 * instructions
-## set up a nav bar and then make a printable version of project 8 and submit on canvas
+## do asset inventory and make new logos for the final result of the website
 
 
 * This Project is a modified clone of [Udacity Project 0 for Project Nautilus](https://github.com/udacity/project-nautilus-project-0)!
