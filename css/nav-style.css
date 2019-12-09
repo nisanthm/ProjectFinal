@@ -1,0 +1,172 @@
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+   }
+   
+   * {
+    box-sizing: border-box;
+   }
+   
+   html {
+    scroll-behavior: smooth;
+   }
+   
+   body {
+    margin: 0;
+   }
+   
+   img {
+    max-width: 100%;
+   }
+   
+   main,
+   form,
+   footer {
+    margin: 0 0.5rem;
+   }
+   
+   a.back,
+   a.back:visited,
+   a.back:focus,
+   a.back:hover,
+   a.back:active {
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5rem;
+    outline: 2px dashed black;
+    width: 10rem;
+   
+   }
+   
+   /* skip link */
+   .skip {
+    position: absolute;
+    top: -1000px;
+    left: -1000px;
+    height: 1px;
+    width: 1px;
+    text-align: left;
+    overflow: hidden;
+    background-color: rgb(43, 10, 73);
+    padding: 1.5rem;
+    color: white;
+    font-size: 1.5rem;
+   }
+   
+   a.skip:active,
+   a.skip:focus,
+   a.skip:hover {
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    overflow: visible;
+   }
+   
+   /*   mobile-first header with hamburger*/
+   .logo-container {
+    display: flex;
+   }
+   
+   .page-title {
+    color: white;
+    font-size: 1.5rem;
+   }
+   
+   .navbar {
+    background-color: rgb(43, 10, 73);
+    padding-bottom: 1rem;
+   }
+   
+   .main-nav {
+    list-style-type: none;
+    display: none;
+   }
+   
+   .nav-links,
+   .logo {
+    text-decoration: none;
+    color: white;
+   }
+   
+   .main-nav li {
+    text-align: center;
+    margin: 1rem auto;
+   }
+   
+   .logo {
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-left: 0.5rem;
+   }
+   
+   .navbar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+   }
+   
+   .active {
+    display: block;
+   }
+   
+   /*   media query for navbar */
+   
+   @media screen and (min-width: 40rem) {
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 0;
+      height: 4.5rem;
+      align-items: center;
+    }
+   
+    .main-nav {
+      display: flex;
+      margin-right: 2rem;
+      flex-direction: row;
+      justify-content: flex-end;
+      padding: 0 0.5rem;
+    }
+   
+    .main-nav li {
+      margin: 0;
+    }
+   
+    .nav-links {
+      margin-left: 1rem;
+    }
+   
+    .logo {
+      margin-top: 0;
+    }
+   
+    .navbar-toggle {
+      display: none;
+    }
+   
+    /* styling order for links is link, visted, focus, hover */
+   
+    .logo:focus,
+    .nav-links:focus {
+      outline: 2px dashed white;
+      padding: 0.5rem;
+    }
+   
+    .nav-links:hover {
+      color: rgb(43, 10, 73);
+      background-color: white;
+      padding: 0.25rem;
+    }
+   }
+   
