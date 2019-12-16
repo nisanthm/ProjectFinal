@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  .container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<head>
+  <meta charset="UTF-8" />
+  <title>About Me</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png" />
+  <link href="https://fonts.googleapis.com/css?family=Merriweather%7cMontserrat&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link media="screen" rel="stylesheet" href="css/nav-style.css">
+  <link media="print" rel="stylesheet" href="css/print.css">
+  <link media="screen" rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <a href="#main" class="skip">Skip to main</a>
+  <a href="#story" class="skip">Skip to story</a>
+  <!-- start of header -->
+  <header id="header" class="header">
+    <nav class="navbar">
+      <span class="navbar-toggle" id="js-navbar-toggle">
+        <i id="symbol-toggle" class="fas fa-bars"></i>
+      </span>
+      <a href="#header" class="logo">
+        <div class="logo-container">
+          <img class="logo" src="images/LogoNM.svg" alt="Company Logo">
+          <h1 class="page-title">WEB Dev I</h1>
+        </div>
+      </a>
+      <ul class="main-nav" id="js-menu">
+        <li>
+          <a href="#main" class="nav-links">Main</a>
+        </li>
+        <li>
+          <a href="#about-I.H.E" class="nav-links">I.H.E</a>
+        </li>
+        <li>
+          <a href="#pictures" class="nav-links">Photos gallery</a>
+        </li>
+        <li>
+          <a href="#Blog" class="nav-links">Blog</a>
+        </li>
+        <li>
+          <a href="#contact" class="nav-links">Contact Me</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main id="main" tabindex="-1" class="main">
+    <section class="hero">
+      <h2>Development tools</h2>
+      <div class="content">
+        
+        <div class="container">
+            <picture>
+                <img class="my-picture" src="images/profilepic-320w.jpg" alt="This is a picture of me" class ="center" />
+                <source media="(min-width: 1960px)" srcset="images/profilepic-1960w.jpg" />
+                <source media="(min-width: 1024px)" srcset="images/profilepic-1024w.jpg" />
+                <source media="(min-width: 640px)" srcset="images/profilepic-640w.jpg" />
+              </picture>
+            
+          <img src="profilepic-320w.png" class="image" style="width:100%" class = "center">
+          <div class="middle">
+            <div class="text">Nisanth Maradana</div>
+          </div>
+        </div>
+        <p class="my-name">Nisanth Maradana</p>
+        <p class="my-location">NJ</p>
+      </div>
+    </section>
+    <section id="about-I.H.E" class="about-I.H.E">
+      <h2>Image Hover Effects </h2>
+      <div class="content">
+        <div class="about-content">
+          <p class="iama">There are many ways to change effects when your cursor pass through an element</p>
+          <p class="my-info">what are hover effect?</p>
+          <p class="iama">The CSS :hover selector is one of many pseudo-classes that are used to style elements.
+             The :hover selector is used to select elements when you mouse over them. ... That is when the user hovers over the element with their mouse.</p>
+          <p class="my-info">
+            Html code for usual link hover just starts with adding a href link 
+          </p>
+          <p class="iama"><A HREF =sentence /A> <a href = "#>Try hovering over this link.</a></p>
+          <p class="my-info">
+            CSS CODE
+              a {
+                background-color: powderblue;
+                transition: background-color .5s;
+              }
+              
+              a:hover {
+                background-color: gold;
+              }
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="pictures" class="gallery about-I.H.E">
+      
+        <h2>Photo gallery</h2>
+      
+        <h3>No Effect</h3>
+        <div class="column">
+          <div>
+            <figure><picture>
+                <source media="(min-width: 1960px)" srcset="images/bx1-1960w.jpg" />
+                <source media="(min-width: 1024px)" srcset="images/bx1-1024w.jpg" />
+                <source media="(min-width: 640px)" srcset="images/bx1-640w.jpg" />
+                <img src="images/box1-320w.jpg" alt="This is the smallest box, it goes in a bigger box" />
+              </picture></figure>
+            <span>Hover</span>
+          </div>
+        </div>
+        <figcaption>smol box!</figcaption>
+      </hr>
+      <br>
+      <figure>
+        <picture>
+          <source media="(min-width: 1960px)" srcset="images/bx22-1960w.jpg" />
+          <source media="(min-width: 1024px)" srcset="images/bx22-1024w.jpg" />
+          <source media="(min-width: 640px)" srcset="images/bx22-640w.jpg" />
+          <img src="images/bx22-320w.jpg" alt="This is the second to smallest box, it goes in a bigger box" />
+        </picture>
+      </figure>
+      
+      <figcaption>mid box!</figcaption>
+    </hr>
+    <br>
+      <figure>  
+        <picture>
+          <source media="(min-width: 1960px)" srcset="images/bx3-1960w.jpg" />
+          <source media="(min-width: 1024px)" srcset="images/bx3-1024w.jpg" />
+          <source media="(min-width: 640px)" srcset="images/bx3-640w.jpg" />
+          <img src="images/box3-320w.jpg" alt="This is the biggest box" />
+        </picture>
+      </figure>
+      <figcaption>big'ole box</figcaption>
+      </div>
+      
+      <div>
+<div>
+</hr>
+<br>
+      <h3 id="demo01">Zoom In</h3>
+      <div class="hover01 column">
+          <div>
+              <figure><picture>
+                  <source media="(min-width: 1960px)" srcset="images/bx1-1960w.jpg" />
+                  <source media="(min-width: 1024px)" srcset="images/bx1-1024w.jpg" />
+                  <source media="(min-width: 640px)" srcset="images/bx1-640w.jpg" />
+                  <img src="images/box1-320w.jpg" alt="This is the smallest box, it goes in a bigger box" />
+                </picture></figure>
+              <span>small box</span>
+              <figcaption>smol box!</figcaption>
+            </div>
+            <div>
+              <figure><picture>
+                  <source media="(min-width: 1960px)" srcset="images/bx22-1960w.jpg" />
+                  <source media="(min-width: 1024px)" srcset="images/bx22-1024w.jpg" />
+                  <source media="(min-width: 640px)" srcset="images/bx22-640w.jpg" />
+                  <img src="images/bx22-320w.jpg" alt="This is the second to smallest box, it goes in a bigger box" />
+                </picture></figure>
+              <span>Medium box</span>
+            </div>
+            <br>
+            <div>
+              <figure><picture>
+                  <source media="(min-width: 1960px)" srcset="images/bx3-1960w.jpg" />
+                  <source media="(min-width: 1024px)" srcset="images/bx3-1024w.jpg" />
+                  <source media="(min-width: 640px)" srcset="images/bx3-640w.jpg" />
+                  <img src="images/box3-320w.jpg" alt="This is the biggest box" />
+                </picture></figure>
+              <span>Larger box</span>
+            </div>
+          </div>
+</div>
+      <h3 id="demo03"> Zoom Out </h3>
+<div class="hover03 column">
+    <div>
+        <figure><picture>
+            <source media="(min-width: 1960px)" srcset="images/bx1-1960w.jpg" />
+            <source media="(min-width: 1024px)" srcset="images/bx1-1024w.jpg" />
+            <source media="(min-width: 640px)" srcset="images/bx1-640w.jpg" />
+            <img src="images/box1-320w.jpg" alt="This is the smallest box, it goes in a bigger box" />
+          </picture></figure>
+        <span>small box</span>
+      </div>
+      <div>
+        <figure><picture>
+            <source media="(min-width: 1960px)" srcset="images/bx22-1960w.jpg" />
+            <source media="(min-width: 1024px)" srcset="images/bx22-1024w.jpg" />
+            <source media="(min-width: 640px)" srcset="images/bx22-640w.jpg" />
+            <img src="images/bx22-320w.jpg" alt="This is the second to smallest box, it goes in a bigger box" />
+          </picture></figure>
+        <span>Medium box</span>
+      </div>
+      <div>
+        <figure><picture>
+            <source media="(min-width: 1960px)" srcset="images/bx3-1960w.jpg" />
+            <source media="(min-width: 1024px)" srcset="images/bx3-1024w.jpg" />
+            <source media="(min-width: 640px)" srcset="images/bx3-640w.jpg" />
+            <img src="images/box3-320w.jpg" alt="This is the biggest box" />
+          </picture></figure>
+        <span>Larger box</span>
+      </div>
+    </div>
+<div>
+    <h3 id="demo13">Flashing</h3>
+<div class="hover13 column">
+    <div>
+        <figure><picture>
+            <source media="(min-width: 1960px)" srcset="images/bx1-1960w.jpg" />
+            <source media="(min-width: 1024px)" srcset="images/bx1-1024w.jpg" />
+            <source media="(min-width: 640px)" srcset="images/bx1-640w.jpg" />
+            <img src="images/box1-320w.jpg" alt="This is the smallest box, it goes in a bigger box" />
+          </picture></figure>
+        <span>small box</span>
+      </div>
+      <div>
+        <figure><picture>
+            <source media="(min-width: 1960px)" srcset="images/bx22-1960w.jpg" />
+            <source media="(min-width: 1024px)" srcset="images/bx22-1024w.jpg" />
+            <source media="(min-width: 640px)" srcset="images/bx22-640w.jpg" />
+            <img src="images/bx22-320w.jpg" alt="This is the second to smallest box, it goes in a bigger box" />
+          </picture></figure>
+        <span>Medium box</span>
+      </div>
+      <div>
+        <figure><picture>
+            <source media="(min-width: 1960px)" srcset="images/bx3-1960w.jpg" />
+            <source media="(min-width: 1024px)" srcset="images/bx3-1024w.jpg" />
+            <source media="(min-width: 640px)" srcset="images/bx3-640w.jpg" />
+            <img src="images/box3-320w.jpg" alt="This is the biggest box" />
+          </picture></figure>
+        <span>Larger box</span>
+      </div>
+    </div>
+<p>source: https://codepen.io/nxworld/pen/ZYNOBZ</p>
+</div>
+</div>
+    </section>
+    <div class="back-to-top">
+      <a aria-label="return to top" class="back" href="#">
+        <i aria-hidden="true" class="fas fa-arrow-up"></i>
+      </a>
+    </div>
+    <article id="Blog" class="Blog">
+      <h2>sherlock holmes</h2>
+      <p><span class="firstcharacter">"O</span>h, yes; plenty. Then there is another note in the Morning Post to say that the marriage would be an
+        absolutely quiet one, that it would be at St. George's, Hanover Square, that only half a dozen intimate friends
+        would be invited, and that the party would return to the furnished house at Lancaster Gate which has been taken
+        by Mr. Aloysius Doran. Two days later--that is, on Wednesday last--there is a curt announcement that the wedding
+        had taken place, and that the honeymoon would be passed at Lord Backwater's place, near Petersfield. Those are
+        all the notices which appeared before the disappearance of the bride."</p>
+
+      <p>"Before the what?" asked Holmes with a start.</p>
+
+      <p>"The vanishing of the lady."</p>
+
+      <p>"When did she vanish, then?"</p>
+
+      <p>"At the wedding breakfast."</p>
+
+      <p>"Indeed. This is more interesting than it promised to be; quite dramatic, in fact."</p>
+
+      <p>"Yes; it struck me as being a little out of the common."</p>
+
+      <p>"They often vanish before the ceremony, and occasionally during the honeymoon; but I cannot call to mind
+        anything quite so prompt as this. Pray let me have the details."</p>
+
+      <p>"I warn you that they are very incomplete."</p>
+
+      <p>"Perhaps we may make them less so."</p>
+
+      <p>"Such as they are, they are set forth in a single article of a morning paper of yesterday, which I will read to
+        you. It is headed, 'Singular Occurrence at a Fashionable Wedding':</p>
+
+      <p>"'The family of Lord Robert St. Simon has been thrown into the greatest consternation by the strange and
+        painful episodes which have taken place in connection with his wedding. The ceremony, as shortly announced in
+        the papers of yesterday, occurred on the previous morning; but it is only now that it has been possible to
+        confirm the strange rumours which have been so persistently floating about. In spite of the attempts of the
+        friends to hush the matter up, so much public attention has now been drawn to it that no good purpose can be
+        served by affecting to disregard what is a common subject for conversation.</p>
+
+      <p>"'The ceremony, which was performed at St. George's, Hanover Square, was a very quiet one, no one being present
+        save the father of the bride, Mr. Aloysius Doran, the Duchess of Balmoral, Lord Backwater, Lord Eustace and Lady
+        Clara St. Simon (the younger brother and sister of the bridegroom), and Lady Alicia Whittington. The whole party
+        proceeded afterwards to the house of Mr. Aloysius Doran, at Lancaster Gate, where breakfast had been prepared.
+        It appears that some little trouble was caused by a woman, whose name has not been ascertained, who endeavoured
+        to force her way into the house after the bridal party, alleging that she had some claim upon Lord St. Simon. It
+        was only after a painful and prolonged scene that she was ejected by the butler and the footman. The bride, who
+        had fortunately entered the house before this unpleasant interruption, had sat down to breakfast with the rest,
+        when she complained of a sudden indisposition and retired to her room. Her prolonged absence having caused some
+        comment, her father followed her, but learned from her maid that she had only come up to her chamber for an
+        instant, caught up an ulster and bonnet, and hurried down to the passage. One of the footmen declared that he
+        had seen a lady leave the house thus apparelled, but had refused to credit that it was his mistress, believing
+        her to be with the company. On ascertaining that his daughter had disappeared, Mr. Aloysius Doran, in
+        conjunction with the bridegroom, instantly put themselves in communication with the police, and very energetic
+        inquiries are being made, which will probably result in a speedy clearing up of this very singular business. Up
+        to a late hour last night, however, nothing had transpired as to the whereabouts of the missing lady. There are
+        rumours of foul play in the matter, and it is said that the police have caused the arrest of the woman who had
+        caused the original disturbance, in the belief that, from jealousy or some other motive, she may have been
+        concerned in the strange disappearance of the bride.'"</p>
+
+      <p>"And is that all?"</p>
+
+      <p>"Only one little item in another of the morning papers, but it is a suggestive one."</p>
+
+      <p>"And it is--"</p>
+      <p> - from sherlock holmes</p>
+    </article>
+    <article id="Blog" class="Blog">
+        <h2>Advanced Hover Effect with pure css</h2>
+      <p>The most common function of hover effects is to highlight text links or buttons. But they have more functions.
+
+          Hover effects add an element of interactivity to a website. They have powerful effects when applied to the images. They can also have a great impact on the user thus making your website well-designed.
+          
+          Hover is an effect that occurs while you place the mouse cursor over an object. It is mostly used for styling and usability.
+          
+          In this tutorial, we’ll show you how to create creative hover effects to your image using only CSS.</p>  
+      
+      <p>1. Create HTML
+          Add figure tag with a class "image". The figure tag is used for indicating self-contained content.
+          Use the fig.caption tag to include a caption or explanation to the content of the figure tag.</p>
+        </article>
+        <p>2. Add CSS
+            Set the max-width, min-width and max-height of the image.
+            Set the position to relative, so as the element is relative from its normal position.
+            Set the overflow to hidden, so as the content be clipped to fit the padding box.
+            Set the color of figcaption and the alignment of the text.</p>
+
+            <p>Our next step is to add style to the h3.
+
+                Set the background and the position of the h3.
+                Specify the transform property. It defines the 2D or 3D transformation of the element. It allows to rotate, scale, skew or translate the element.
+                Set the text-transform to uppercase, so as to make all characters of each word uppercase.
+                Define the font-weight. Here, we set it to 400.</p>
+                <p>Now let’s set a style to :before pseudo-element which is a generated content element that adds any element before the content.
+
+                    Set the height and width of the element and define the color.
+                    Specify the transition setting the transition-duration to 0.3.
+                    Specify the transform property. Rotate the element by 110 degrees and translate the element along the y-axis by -50%.
+                    figure.image:before {</p>
+                      <p>The next step is to set the hover effect to our image, h3, and :before.</p>
+                      <p>Now let's bring our code together</p>
+                      <p>source https://www.w3docs.com/snippets/css/advanced-image-hover-effects-with-pure-css.html</p>
+                      <article id="Blog" class="Blog">
+                          <h2>Image Hover Effects Made with CSS3</h2>
+                          <p>Every web designer should have an image hover effects library for their projects.</p><p> Image hover effects are fun and add movement and flair to different components of a website.<p>
+                            <p> Hover effects use CSS features, such as 3D translate and pseudo elements, in order to create beautiful, subtle transitions, and to reveal text or captions.</p> <p>
+                              <p>They enhance the look and feel of a website and make it easier for visitors to navigate.</p>
+
+                              <p>There are countless way of creating interesting and unique interactions in the world of web design, and hover effects are growing in popularity.<p> Hover effects provide elegant and neat ways of showing and hiding image captions, and new designs are available and ready to use all the time.
+                                <p> Creating these effects might seem complex, but it’s actually as easy as copy and paste, thanks to the powerful technology of CSS3.</p>
+                                <p> So you’re not required to be an expert in coding to take advantage of these fantastic effects, like images that slide, flip, dissolve, rotate, become foggy, or simply become entirely replaced by text.</p>
+                              
+                              <p>As opposed to jQuery, CSS3 requires a shorter loading time, so your effects will work more smoothly.</p> Furthermore, CSS3 offers enhanced image resolution for stunning clarity, and a relatively simple language that’s split into logical modules with customizable functions for greater flexibility, and an overall enhanced, powerful design and user experience. CSS3 is fully compatible with other CSS versions, and most importantly, offers consistency (any changes in your website’s style sheet will be copied to every page of your website). Thus, CSS3 makes the designer’s job easier and faster, and greatly enhances the user’s experience.</p>
+                              
+                              In this article, image hover effects made with CSS3 that you should add to your library for help with your future web design projects. We think these beautiful examples will inspire you to create something beautiful, and will be very helpful as they will add movement and energy to websites while enhancing the overall experience of the users. We hope you will find them useful… enjoy! Also, don’t forget to let us know which ones you like the most in the comment section below!</p>
+                          </article>
+                    </main>
+  <hr>
+  <section id="contact" class="form-container">
+    <h2>Contact Form</h2>
+    <form name="contact" method="POST" data-netlify="true">
+      <fieldset>
+        <legend>Please feel free to send a message</legend>
+        <ul>
+          <li><label>Email:<br> <input type="email" name="email" /></label><br></li>
+
+          <li><label>Message:<br> <textarea name="message"></textarea></label></li>
+        </ul>
+
+        <fieldset>
+          <legend>Would you like a reply?</legend>
+          <ol>
+            <li><input type="radio" name="response" value="yes"> Yes</li>
+            <li><input type="radio" name="response" value="no"> No</li>
+          </ol>
+        </fieldset>
+        <button type="submit">Send</button>
+        <button class="submit"><span>send </span></button>
+      </fieldset>
+    </form>
+  </section>
+  <div class="back-to-top">
+    <a aria-label="return to top" class="back" href="#">
+      <i aria-hidden="true" class="fas fa-arrow-up"></i>
+    </a>
+  </div>
+  <br>
+  <footer class="footer">
+    <p>
+      Copyright &copy; 2019, Nisanth M
+    </p>
+    <a href=https://github.com/nisanthm> <svg class="github" width="32" height="32" viewBox="0 0 16 16" fill="black"
+      xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8C0 11.54 
+                  2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 
+                  14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 
+                  11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 
+                  11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 
+                  4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 
+                  3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 
+                  11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 
+                  10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" />
+      </svg>
+    </a>
+  </footer>
+  <!-- start of javascript for nav toggle -->
+  <script>
+    let mainNav = document.getElementById('js-menu');
+    let navBarToggle = document.getElementById('js-navbar-toggle');
+    let symbolToggle = document.getElementById('symbol-toggle');
+    navBarToggle.addEventListener('click', function () {
+      mainNav.classList.toggle('active');
+      if (symbolToggle.classList.contains('fa-bars')) {
+        symbolToggle.classList.remove('fa-bars');
+        symbolToggle.classList.add('fa-times');
+      } else {
+        symbolToggle.classList.remove('fa-times');
+        symbolToggle.classList.add('fa-bars');
+      }
+    });
+  </script>
+  <!-- end of javascript for nav toggle -->
+</body>
+
+</html>
