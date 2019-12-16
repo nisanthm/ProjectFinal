@@ -1,0 +1,472 @@
+/*Explain below rules
+- body takes care of the font customizer and set the font Montserrat for all of the body using inheritance
+- having max width at 100% sets the size for all images using inheritance
+*/
+body {
+  font-family: Montserrat, sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+h1,
+h2 {
+  font-family: Merriweather, serif;
+  color: #ffffff;
+}
+
+/*
+Explain below rules
+aligns all text into the center as these rules are set for the entire document not just one part
+*/
+
+.content {
+  text-align: right;
+  background-color:hsla(50, 33%, 25%, .75);
+  color: #ffffff;
+}
+/*
+Explain below rules
+sizing based on the root element font so that all font rules will act accordiningly in response to the root font
+2 rems to the font size and the align vertically to the top
+*/
+.page-title {
+  display: inline;
+  font-size: 1rem;
+  vertical-align: top;
+}
+/*
+Explain below rules
+aligns the text after "i want to be" as the answer to the question,and then chooses the font and then the alignments
+sets 2 rems margins to the page title
+*/
+.iama {
+  font-family: Merriweather, serif;
+  text-align: left;
+  margin-left: 1rem;
+}
+/*
+Explain below rules
+styles the answer part to 1.2rem, a little more than the 16 pixels that was used above for 1rem
+also font size determines the size for my-info
+
+there is two rems 0 and 2 so that both top and left padding are set
+*/
+.my-info {
+  font-size: 1.2rem;
+  padding: 0 2rem;
+}
+a {
+  background-color:hsla(50, 33%, 25%, .75);
+  transition: background-color .5s;
+}
+
+a:hover {
+  background-color: gold;
+}
+/*
+Explain below rules
+sets the border, width, and the radius for set border
+sets the width for the first time 25%
+*/
+.my-picture {
+  width: 25%;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+/*
+Explain below rules
+picks dark purple as a background color.
+adds margins 4 and 2 to the padding  
+*/
+.hero,
+.footer {
+  background-color:hsla(50, 33%, 25%, .75);
+  color: #ffffff;
+  padding: 1rem 2rem;
+  margin: 0 -1rem;
+}
+/*
+Explain below rules
+gave the padding 2 rems and then aligned the footer to the center
+*/
+.footer {
+  background-color:hsla(50, 33%, 25%, .75);
+  text-align: center;
+  font-size: 1rem;
+  padding: 4rem 2rem;
+}
+/* responsive web design*/
+.image123{
+  float: left;
+}
+.imageContainer {
+  float: left;
+}
+h2 {
+	margin: 60px 15px 0;
+	padding: 0;
+	font-weight: 300;
+}
+h2 span {
+	margin-left: 1em;
+	color: #aaa;
+	font-size: 85%;
+}
+.column {
+	margin: 15px 15px 0;
+	padding: 0;
+}
+.column:last-child {
+	padding-bottom: 60px;
+}
+.column::after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.column div {
+	position: relative;
+	float: left;
+	width: 300px;
+	height: 200px;
+	margin: 0 0 0 25px;
+	padding: 0;
+}
+.column div:first-child {
+	margin-left: 0;
+}
+.column div span {
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	z-index: -1;
+	display: block;
+	width: 300px;
+	margin: 0;
+	padding: 0;
+	color: #444;
+	font-size: 18px;
+	text-decoration: none;
+	text-align: center;
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	opacity: 0;
+}
+figure {
+	width: 300px;
+	height: 200px;
+	margin: 0;
+	padding: 0;
+	background: #fff;
+	overflow: hidden;
+}
+figure:hover+span {
+	bottom: -36px;
+	opacity: 1;
+}
+
+
+
+figcaption {
+  text-align: center;
+}
+.hover01 figure img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover01 figure:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+.hover03 figure img {
+	-webkit-transform: scale(1.5);
+	transform: scale(1.5);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.hover03 figure:hover img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+}
+.hover13 figure:hover img {
+	opacity: 1;
+	-webkit-animation: flash 1.5s;
+	animation: flash 1.5s;
+}
+@-webkit-keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes flash {
+	0% {
+		opacity: .4;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+h2 {
+  padding-left: 1rem;
+  background-color: hsla(50, 33%, 25%, .75);
+  color: #ffffff;
+}
+h3 {
+  padding-left: 1rem;
+  background-color: hsla(50, 33%, 25%, .75);
+  color: #ffffff;
+}
+figcaption {
+  margin: 0 2rem;
+  text-align:right;
+}
+/*  hero*/
+/*
+  comment
+*/
+.my-name,
+.my-location {
+  font-size: 1.25rem;
+  margin: 0 1rem;
+}
+/*  article*/
+/*
+  comment
+*/
+.story {
+  padding: 2rem 0;
+  background-color: rgb(14, 2, 68);
+  color: #ffffff;
+}
+
+.story h2 {
+  font-size: 3rem;
+  text-align: center;
+  background-color: rgb(14, 2, 68);
+}
+
+.story p {
+  margin: 1rem 2rem;
+  font-size: 1.5rem;
+  background-color: rgb(14, 2, 68);
+}
+
+.firstcharacter {
+  color: #903;
+  float: left;
+  font-family: Georgia;
+  font-size: 75px;
+  line-height: 60px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
+/* layout */
+/* mobile is the default layout (no media queries needed) */
+/*
+    comment
+*/
+.about-content {
+  display: grid;
+  grid-template-columns: 3fr 4fr 3fr;
+  justify-items: center;
+}
+
+.iama,
+.my-info {
+  grid-column: 2/3;
+  font-size: 2rem;
+}
+
+.iama {
+  justify-self: left;
+}
+
+.my-info {
+  justify-self: right;
+}
+/* form styling*/
+        form {
+            display: grid;
+            justify-items: center;
+        }
+        .outer {
+            background-color: whitesmoke;
+            border-radius: .25rem;
+            border: 1px solid lightgrey;
+            width: 50%;
+        }
+        .inner {
+          
+            border: 1px solid lightgrey;
+        }
+        legend {
+            font-size: 1rem;
+            font-weight: 600;
+            color: rgb(12, 173, 106);
+            border: 1px solid lightgrey;
+            border-radius: .25rem;
+            padding: .5rem .5rem;
+            background-color: white;
+            margin-bottom: 10px;
+        }
+        .input-box {
+            border: 1.50px solid gray;
+            width: 90%;
+            height: 2rem;
+            margin-top: 12px;
+        }
+        textarea {
+            border: 1.50px solid gray;
+            width: 90%;
+            margin-top: 12px;
+        }
+        label {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        button {
+            font-family: 'Lato', sans-serif;
+            font-size: 1.75rem;
+            color: white;
+            background-color: rgb(12, 173, 106);
+            border: rgb(12, 173, 106);
+            padding: .75rem .75rem;
+        }
+   
+button, input, select, textarea {
+  font-family : inherit;
+  font-size   : 100%;
+}
+
+input:focus, textarea:focus {
+  background   : rgba(0,0,0,.1);
+  border-radius: 5px;
+  outline      : none;
+}
+
+textarea {
+  vertical-align: top;
+}
+
+.footer,
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr minmax(20rem, 40rem) 1fr;
+}
+
+.footer p,
+.footer a,
+.form-container form,
+.form-container h2 {
+  grid-column: 2/3;
+}
+
+/* git hub logo added possibly animated */
+
+.github {
+  max-width: 100%;
+  fill: white;
+}
+
+/**/
+/* tablet layout  48rem (768px) */
+@media screen and (min-width: 48rem) {
+  /*
+    comment
+*/
+  .page-title {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .my-name,
+  .my-location {
+    font-size: 1.5rem;
+  }
+
+  figure {
+    margin: 1rem;
+  }
+
+  /*
+comment
+*/
+  .gallery figure {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  figcaption {
+    font-size: 1.5rem;
+  }
+
+}
+
+/* wide screen layout  90rem (1440px) */
+@media screen and (min-width: 90rem) {
+  /*
+  comment
+*/
+  .my-picture {
+    max-width: 20rem;
+  }
+  /*
+  aligns the gallery to the center and makes it look formatted
+*/
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: start;
+  }
+
+  .gallery h2 {
+    grid-column: 1/4;
+  }
+
+  .gallery hr {
+    display: none;
+  }
+
+  .gallery figure {
+    grid-template-columns: 1fr;
+    align-items: center;
+  }
+
+  figcaption {
+    padding: 3rem;
+    font-size: 1.5rem;
+  }
+  /*
+comment
+*/
+  .story {
+    display: grid;
+    grid-template-columns: 1fr 40rem 1fr;
+  }
+
+  .story h2 {
+    grid-column: 1/4;
+  }
+
+  .story p {
+    grid-column: 2/3;
+    line-height: 1.5;
+  }
+}
